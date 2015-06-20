@@ -4,6 +4,8 @@
 // @description 抓图
 // @match       http://konachan.com/*
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
+// @updateURL 	https://github.com/nagatoyk/gm_script/raw/27dc7016c1ee457cc69c7858af623f3a8ca2c219/konachan.user.js
+// @downloadURL https://github.com/nagatoyk/gm_script/raw/27dc7016c1ee457cc69c7858af623f3a8ca2c219/konachan.user.js
 // @version     1.0
 // @grant       none
 // ==/UserScript==
