@@ -3,6 +3,7 @@
 // @namespace   https://yuki-yukimax.rhcloud.com
 // @description 把烦人的土豆侧栏关掉
 // @match       http://*.tudou.com/*
+// @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
 // @require     http://yukimax.sinaapp.com/f/jQuery.ScrollTo.js
 // @updateURL 	https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
@@ -10,7 +11,8 @@
 // @author      小熊
 // @grant       none
 // ==/UserScript==
-$(document).ready(function() {
+var jQ172 = $.noConflict(true);
+(function($) {
 	switch (location.hostname) {
 		case 'cartoon.tudou.com':
 			if (!$('body').attr('class')) {
@@ -27,4 +29,4 @@ $(document).ready(function() {
 			}
 			break;
 	}
-});
+}) (jQ172);
