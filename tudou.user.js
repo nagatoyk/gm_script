@@ -4,7 +4,8 @@
 // @description 把烦人的土豆侧栏关掉
 // @match       http://*.tudou.com/*
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
-// @updateURL 	https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
+// @require     http://yukimax.sinaapp.com/f/jQuery.ScrollTo.js
+// @updateURL   https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @version     0.7
 // @author      小熊
@@ -23,9 +24,7 @@ var jQ172 = $.noConflict(true);
 			switch (location.pathname.substring(1, 9)) {
 				case 'albumpaly':
 				case 'listplay':
-					$('html,body').animate({
-						scrollTop: $('#player').offset().top
-					}, 'slow');
+					$.scrollTo('#player', 500);
 					console.log(location.pathname.substring(1, 9));
 					break;
 			}
