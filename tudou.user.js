@@ -6,7 +6,7 @@
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
 // @updateURL   https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
-// @version     0.8
+// @version     0.9
 // @author      小熊
 // @grant       none
 // ==/UserScript==
