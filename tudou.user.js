@@ -6,7 +6,7 @@
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
 // @updateURL   https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
-// @version     0.9
+// @version     1.0
 // @author      小熊
 // @grant       none
 // ==/UserScript==
@@ -21,10 +21,7 @@ var jQ172 = $.noConflict(true);
 			break;
 		case 'www.tudou.com':
 			if (location.pathname.match('albumplay|listplay')) {
-				$('html,body').stop(true);
-				$('html,body').animeta({
-					scrollTop: $('#player').offset().top
-				}, 1000);
+				$(window).scrollTop($('#player').offset().top);
 			}
 			console.log(location.hostname, location.pathname.substring(1, 9), $('#player').offset().top);
 			break;
