@@ -4,7 +4,6 @@
 // @description 把烦人的土豆侧栏关掉
 // @match       http://*.tudou.com/*
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
-// @require     http://yukimax.sinaapp.com/f/jQuery.ScrollTo.js
 // @updateURL   https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @version     0.8
@@ -21,14 +20,13 @@ var jQ172 = $.noConflict(true);
 			console.log(location.hostname);
 			break;
 		case 'www.tudou.com':
-			switch (location.pathname.substring(1, 9)) {
-				case 'albumpaly':
-				case 'listplay':
-					$.scrollTo('#player', 500);
-					console.log(location.pathname.substring(1, 9));
-					break;
+			if (location.pathname.match('albumplay|listplay')) {
+				$('html,body').stop(true);
+				$('html,body').animeta({
+					scrollTop: $('#player').offset().top
+				}, 1000);
 			}
-			console.log(location.hostname, $('#player').offset().top);
+			console.log(location.hostname, location.pathname.substring(1, 9), $('#player').offset().top);
 			break;
 	}
 }) (jQ172);
