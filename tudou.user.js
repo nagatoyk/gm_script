@@ -20,12 +20,8 @@ var jQ172 = $.noConflict(true);
 			console.log(location.hostname);
 			break;
 		case 'www.tudou.com':
-			switch (location.pathname.substring(1, 9)) {
-				case 'albumplay':
-				case 'listplay':
-				case 'programs':
-					$(document).scrollTop($('#player').offset().top - $('#gTop').height());
-					break;
+			if (location.pathname.match('albumplay|listplay|programs')) {
+				$(document).scrollTop($('#player').offset().top - $('#gTop').height());
 			}
 			console.log(location.hostname, location.pathname.substring(1, 9), $('#player').offset().top);
 			break;
