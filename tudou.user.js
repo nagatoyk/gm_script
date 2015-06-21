@@ -13,22 +13,20 @@
 // ==/UserScript==
 var jQ172 = $.noConflict(true);
 (function($) {
-	$(document).ready(function() {
-		switch (location.hostname) {
-			case 'cartoon.tudou.com':
-				if (!$('body').attr('class')) {
-					$('body').addClass('g-sidebar-hide').addClass('w1216');
-				}
-				break;
-			case 'www.tudou.com':
-				switch (location.pathname.substring(1, 9)) {
-					case 'albumpaly':
-					case 'listplay':
-						$.scrollTo('#player', 500);
-						console.log(location.pathname.substring(1, 9));
-						break;
-				}
-				break;
-		}
-	});
+	switch (location.hostname) {
+		case 'cartoon.tudou.com':
+			if (!$('body').attr('class')) {
+				$('body').addClass('g-sidebar-hide').addClass('w1216');
+			}
+			break;
+		case 'www.tudou.com':
+			switch (location.pathname.substring(1, 9)) {
+				case 'albumpaly':
+				case 'listplay':
+					// $.scrollTo('#player', 500);
+					console.log(location.pathname.substring(1, 9));
+					break;
+			}
+			break;
+	}
 }) (jQ172);
