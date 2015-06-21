@@ -30,9 +30,15 @@ var jQ172 = $.noConflict(true);
 				if (!r.id || r.pid == 0 || r.error) {
 					$.post('http://yukimax.sinaapp.com/p/saveImg.php?pid=' + pid, {imgOpt:{url:imgurl,source:source}}, function(r) {
 						console.log(r);
+						if (r.original_pic) {
+							location.href = r.original_pic;
+						}
 					}, 'json');
 				} else {
 					console.log(r);
+					if (r.original_pic) {
+						location.href = r.original_pic;
+					}
 				}
 			}, 'json');
 			break;
