@@ -7,7 +7,7 @@
 // @require     http://yukimax.sinaapp.com/f/jQuery.ScrollTo.js
 // @updateURL   https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/tudou.user.js
-// @version     0.7
+// @version     0.8
 // @author      小熊
 // @grant       none
 // ==/UserScript==
