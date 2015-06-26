@@ -6,7 +6,7 @@
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
 // @updateURL   https://github.com/nagatoyk/gm_script/raw/master/konachan.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/konachan.user.js
-// @version     1.0.1
+// @version     1.0.2
 // @grant       none
 // ==/UserScript==
 var jQ172 = $.noConflict(true);
