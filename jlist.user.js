@@ -6,7 +6,7 @@
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
 // @updateURL   https://github.com/nagatoyk/gm_script/raw/master/jlist.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/jlist.user.js
-// @version     1.0.3
+// @version     1.0.4
 // @grant       none
 // ==/UserScript==
 
@@ -20,7 +20,7 @@ var jQ172 = $.noConflict(true);
 	m = [];
 	$('#productgallery .fancy').each(function(i, e) {
 		console.log(i, e);
-		m.push(i: {'link': e.href});
+		m.push(i + ': {\'link\':\'' + e.href + '}');
 	});
 	console.log(m);
 }) (jQ172);
