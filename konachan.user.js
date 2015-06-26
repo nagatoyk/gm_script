@@ -37,8 +37,8 @@ var jQ172 = $.noConflict(true);
 				} else {
 					console.log(r);
 					if (r.original_pic) {
-						// location.href = r.original_pic;
-						alert(r.original_pic);
+						location.href = r.original_pic;
+						// alert(r.original_pic);
 					}
 				}
 			}, 'json');
