@@ -22,6 +22,9 @@ var jQ172 = $.noConflict(true);
 		console.log(i, e);
 		list[i] = {title: e.title, link: e.href};
 	});
-	m = [{'title': document.title, 'base': baseImg, 'list': list}];
+	m = [{'title': document.title, 'pid': parseInt(location.pathname.match('/product/([A-Z0-9]{1,})')[1], 32), 'base': baseImg, 'list': list}];
 	console.log(m);
+	$.post('http://yukimax.sinaapp.com/t/jlist.php', m, function(r) {
+		console.log(r);
+	});
 }) (jQ172);
