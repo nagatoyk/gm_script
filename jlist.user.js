@@ -6,7 +6,7 @@
 // @require     http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
 // @updateURL   https://github.com/nagatoyk/gm_script/raw/master/jlist.user.js
 // @downloadURL https://github.com/nagatoyk/gm_script/raw/master/jlist.user.js
-// @version     1.0.6
+// @version     1.1.6
 // @grant       none
 // ==/UserScript==
 
@@ -17,10 +17,11 @@ var jQ172 = $.noConflict(true);
 	fancyList = $('#productgallery >.fancy');
 	console.log(baseImg);
 	console.log(fancyList);
-	m = [];
+	list = {};
 	$('#productgallery .fancy').each(function(i, e) {
 		console.log(i, e);
-		m.push([i, e.href]);
+		list[i] = {title: e.title, link: e.href};
 	});
+	m = [{'title': document.title, 'base': baseImg, 'list': list}];
 	console.log(m);
 }) (jQ172);
